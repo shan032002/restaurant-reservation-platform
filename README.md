@@ -13,8 +13,6 @@ food-essentials
 
 <img src="https://github.com/shan032002/restaurant-reservation-platform/assets/162344161/8c4a14eb-40a8-4737-8cb4-ff58b38a2f34"/>
 
-offer
+modal
 <img src="https://github.com/shan032002/restaurant-reservation-platform/assets/162344161/42e3cd0c-bba8-4ccc-9452-5e0011e87854"/>
 
-best-chefs
-<img src="https://github.com/shan032002/restaurant-reservation-platform/assets/162344161/fbbe1a97-6d33-43ed-8c2e-118073c577ab"/>

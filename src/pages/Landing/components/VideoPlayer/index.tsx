@@ -63,7 +63,7 @@ export const VideoPlayer = (props: VideoPlayerProps & VideoContentProps) => {
         </Modal.Header>
         <Modal.Body>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            url="https://youtu.be/8V-R4f1QXds?si=y4hr88VXxEvmKB8T"
             controls
             onReady={() => setIsLoading(false)}
           />

@@ -57,10 +57,21 @@ export const NavList = styled.ul`
     padding: 10px;
     z-index: 1000;
   }
+  @media (max-width: 1200px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
+  }
 `;
 
 export const NavItem = styled.li`
-  margin-right: 20px;
+  margin-right: 70px;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -96,6 +107,10 @@ export const DrawerContainer = styled.div`
   @media (min-width: 769px) {
     display: none;
   }
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
 `;
 
 export const DrawerItem = styled(NavLink)`
@@ -117,6 +132,10 @@ export const MenuButton = styled.div`
 
   @media (min-width: 769px) {
     display: none;
+  }
+
+  @media (max-width: 1200px) {
+    display: block;
   }
 `;
 

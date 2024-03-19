@@ -1,4 +1,4 @@
-import { Landing } from "./pages/Landing/Landing";
+import { Landing } from "./pages";
 
 function App() {
   return (

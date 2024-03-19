@@ -1,6 +1,12 @@
 import {
+  BookATable,
   CarouselComp,
   Chefs,
+  Contacts,
+  CopyRights,
+  Gallery,
+  MapComp,
+  Menu,
   NavBar,
   OfferText,
   Title,
@@ -19,6 +25,10 @@ import chef1 from "../../assets/chef-1.jpg";
 import chef2 from "../../assets/chef-2.jpg";
 import chef3 from "../../assets/chef-3.jpg";
 import chef4 from "../../assets/chef-4.jpg";
+import { menuData } from "./config/menu-config";
+import { galleryData } from "./config/gallery-config";
+import { openingHours } from "./config/opening-hours.config";
+import { dishes } from "./config/dishes.config";
 
 export interface LandingProps {}
 
@@ -68,11 +78,6 @@ let data = [
 
 let content = [
   {
-    id: 1,
-    description:
-      "Immerse yourself in a culinary journey where each dish tells a tale of passion and innovation. From the first bite to the last, experience a symphony of flavors meticulously crafted to delight your senses and leave you craving for more",
-  },
-  {
     id: 2,
     description:
       "Our commitment to excellence shines through in every ingredient, sourced from local artisans and global purveyors who share our dedication to quality. Step into our world of gastronomic wonders and discover a dining experience like no other",
@@ -121,7 +126,7 @@ export function Landing() {
   };
 
   const _renderCarousel = () => {
-    return <CarouselComp child={data} />;
+    return <CarouselComp child={dishes} />;
   };
 
   const _renderVideoPlayer = () => {
@@ -151,6 +156,29 @@ export function Landing() {
     );
   };
 
+  const _renderMenu = () => {
+    return <Menu bgImage={foodBg} menu={menuData} />;
+  };
+
+  const _renderGallery = () => {
+    return <Gallery galleryData={galleryData} />;
+  };
+
+  const _renderBookATable = () => {
+    return <BookATable bgImage={foodBg} list={openingHours} />;
+  };
+
+  const _renderContacts = () => {
+    return <Contacts />;
+  };
+
+  const _renderMap = () => {
+    return <MapComp />;
+  };
+
+  const _renderCopyRights = () => {
+    return <CopyRights />;
+  };
   return (
     <>
       {_renderNavBar()}
@@ -164,6 +192,12 @@ export function Landing() {
         {_renderVideoPlayer()}
         {_renderOfferText()}
         {_renderChef()}
+        {_renderMenu()}
+        {_renderGallery()}
+        {_renderBookATable()}
+        {_renderContacts()}
+        {_renderMap()}
+        {_renderCopyRights()}
       </Container>
     </>
   );

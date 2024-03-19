@@ -63,15 +63,15 @@ export const CarouselComp = (props: CarouselProps) => {
   const settings: Settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: slidesToShow,
     slidesToScroll: 2,
     swipeToSlide: true,
     autoplay: !isFocused,
     autoplaySpeed: 2000,
     pauseOnHover: false,
-    prevArrow: customPrevArrow,
-    nextArrow: customNextArrow,
+    prevArrow: <></>,
+    nextArrow: <></>,
   };
 
   const handleFocus = () => {

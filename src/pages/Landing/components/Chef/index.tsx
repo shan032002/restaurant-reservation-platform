@@ -71,8 +71,8 @@ export const Chefs = (props: ChefsProps) => {
     autoplay: !isFocused,
     autoplaySpeed: 2500,
     pauseOnHover: false,
-    prevArrow: customPrevArrow,
-    nextArrow: customNextArrow,
+    prevArrow: <></>,
+    nextArrow: <></>,
     centerMode: true,
   };
 
@@ -203,7 +203,7 @@ export const Chefs = (props: ChefsProps) => {
     );
   };
   return (
-    <Container>
+    <Container id={"chefs"}>
       {_renderHeader()}
       {_renderCarousel()}
       {_renderArrows()}

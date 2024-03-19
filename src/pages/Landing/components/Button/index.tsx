@@ -23,6 +23,8 @@ export const ButtonComp = (props: ButtonCompProps) => {
   return <div>{_renderButton()}</div>;
 };
 
-ButtonComp.defaultProps = {};
+ButtonComp.defaultProps = {
+  title: "Book a Table",
+};
 
 export default ButtonComp;

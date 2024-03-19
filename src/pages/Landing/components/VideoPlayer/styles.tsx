@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const ThumbNailContainer = styled.div`
   position: relative;
   width: 100%;
-  maxwidth: 80%;
+  max-width: 80%;
   margin: 3%;
   @media (max-width: 769px) {
   }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../../../assets/logo.jpeg";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -8,7 +8,6 @@ import {
   DrawerContainer,
   DrawerItem,
   Header,
-  Logo,
   LogoContainer,
   MainContainer,
   MenuButton,
@@ -31,6 +30,15 @@ export function NavBar(props: NavBarProps) {
 
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+
+  /// nav Links
+
+  const home = useRef<HTMLDivElement | null>(null);
+  const aboutUs = useRef<HTMLDivElement | null>(null);
+  const gallery = useRef<HTMLDivElement | null>(null);
+  const chefs = useRef<HTMLDivElement | null>(null);
+  const menu = useRef<HTMLDivElement | null>(null);
+  const contacts = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,22 +115,88 @@ export function NavBar(props: NavBarProps) {
       <Container>
         <NavList>
           <NavItem>
-            <NavLink href="#">HOME</NavLink>
+            <NavLink
+              href="#home"
+              onClick={() =>
+                home.current?.scrollIntoView({
+                  block: "end",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              HOME
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">ABOUT US</NavLink>
+            <NavLink
+              href="#about"
+              onClick={() =>
+                aboutUs.current?.scrollIntoView({
+                  block: "start",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              ABOUT US
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">CHEFS</NavLink>
+            <NavLink
+              href="#chefs"
+              onClick={() =>
+                chefs.current?.scrollIntoView({
+                  block: "start",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              CHEFS
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">MENU</NavLink>
+            <NavLink
+              href="#menu"
+              onClick={() =>
+                menu.current?.scrollIntoView({
+                  block: "start",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              MENU
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">GALLERY</NavLink>
+            <NavLink
+              href="#gallery"
+              onClick={() =>
+                gallery.current?.scrollIntoView({
+                  block: "start",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              GALLERY
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">CONTACTS</NavLink>
+            <NavLink
+              href="#contacts"
+              onClick={() =>
+                contacts.current?.scrollIntoView({
+                  block: "end",
+                  inline: "nearest",
+                  behavior: "smooth",
+                })
+              }
+            >
+              CONTACTS
+            </NavLink>
           </NavItem>
         </NavList>
       </Container>
@@ -143,22 +217,82 @@ export function NavBar(props: NavBarProps) {
           </CloseButton>
         </DrawerItem>
 
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#home"
+          onClick={() => {
+            home.current?.scrollIntoView({
+              block: "end",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           HOME
         </DrawerItem>
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#about"
+          onClick={() => {
+            aboutUs.current?.scrollIntoView({
+              block: "start",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           ABOUT US
         </DrawerItem>
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#chefs"
+          onClick={() => {
+            chefs.current?.scrollIntoView({
+              block: "start",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           CHEFS
         </DrawerItem>
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#menu"
+          onClick={() => {
+            menu.current?.scrollIntoView({
+              block: "start",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           MENU
         </DrawerItem>
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#gallery"
+          onClick={() => {
+            gallery.current?.scrollIntoView({
+              block: "start",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           GALLERY
         </DrawerItem>
-        <DrawerItem href="#" onClick={() => setShowDrawer(false)}>
+        <DrawerItem
+          href="#contacts"
+          onClick={() => {
+            contacts.current?.scrollIntoView({
+              block: "center",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+            setShowDrawer(false);
+          }}
+        >
           CONTACTS
         </DrawerItem>
       </DrawerContainer>

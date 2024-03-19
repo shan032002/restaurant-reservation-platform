@@ -49,7 +49,7 @@ export const Title = (props: TitleProps) => {
     return <ImageContainer src={tandoori} />;
   };
   return (
-    <MainContainer>
+    <MainContainer id={"home"}>
       {_renderImage()}
       {_renderTitle()}
       {_renderSubTitle()}

@@ -72,7 +72,7 @@ export const VideoContent = (props: VideoContentProps) => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer id="about">
       {_renderTitle()}
       {_renderContent()}
       {_renderIcons()}

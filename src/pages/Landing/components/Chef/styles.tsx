@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #000;
+  margin: 3%;
 `;
 
 export const HeaderContainer = styled.div`

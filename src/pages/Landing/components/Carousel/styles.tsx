@@ -1,7 +1,9 @@
+import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #000;
+  margin: 3%;
 `;
 
 export const HeaderContainer = styled.div`
@@ -36,7 +38,6 @@ export const HeaderSubTitleText = styled.div`
 `;
 export const CarouselContainer = styled.div`
   position: relative;
-
   .slick-dots {
     position: absolute;
     width: 100%;
@@ -68,10 +69,10 @@ export const CarouselContainer = styled.div`
   }
 `;
 
-export const CarouselSubContainer = styled.div``;
+export const CarouselSubContainer = styled(Row)``;
 
-export const CarouselItemsContainer = styled.div`
-  margin: 0 10px;
+export const CarouselItemsContainer = styled(Col)`
+  margin: 0 10 0 10px;
   height: 100%;
   width: 100%;
 `;
@@ -82,6 +83,7 @@ export const ImageStyle = styled.img`
   object-fit: contain; 
   display: block;
   margin: auto; 
+
 `;
 
 export const TextContainer = styled.p`
